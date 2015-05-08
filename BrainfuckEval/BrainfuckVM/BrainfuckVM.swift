@@ -80,43 +80,7 @@ class BrainfuckVM
     {
         if let ins = instructions
         {
-            var mem = Array(count: 30000, repeatedValue: 0)
-            var mp = 0
-            var ip = 0
-            
-            while ip < ins.count
-            {
-                switch ins[ip]
-                {
-                case .PointerInc:
-                    mp++
-                    ip++
-                case .PointerDec:
-                    mp--
-                    ip++
-                case .DataInc:
-                    mem[mp]++
-                    ip++
-                case .DataDec:
-                    mem[mp]--
-                    ip++
-                case .Write:
-                    io.write(Character(UnicodeScalar(mem[mp])))
-                    ip++
-                case .LoopBegin(let loopEnd):
-                    if mem[mp] == 0
-                    {
-                        ip = loopEnd
-                    }
-                    else
-                    {
-                        ip++
-                    }
-                case .LoopEnd(let loopBegin):
-                    ip = loopBegin
-                default:()
-                }
-            }
+            let runtime = BrainfuckRuntime(io: io, instructions: ins)
         }
         else
         {

@@ -16,6 +16,7 @@
 		11D96E191AFC5B2B00287DC8 /* BrainfuckIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D96E181AFC5B2B00287DC8 /* BrainfuckIO.swift */; };
 		11D96E1B1AFC5BA100287DC8 /* BrainfuckInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D96E1A1AFC5BA100287DC8 /* BrainfuckInstruction.swift */; };
 		11D96E1D1AFC675D00287DC8 /* BrainfuckVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D96E1C1AFC675D00287DC8 /* BrainfuckVM.swift */; };
+		11D96E1F1AFC984800287DC8 /* BrainfuckRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D96E1E1AFC984800287DC8 /* BrainfuckRuntime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		11D96E181AFC5B2B00287DC8 /* BrainfuckIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrainfuckIO.swift; path = BrainfuckVM/BrainfuckIO.swift; sourceTree = "<group>"; };
 		11D96E1A1AFC5BA100287DC8 /* BrainfuckInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrainfuckInstruction.swift; path = BrainfuckVM/BrainfuckInstruction.swift; sourceTree = "<group>"; };
 		11D96E1C1AFC675D00287DC8 /* BrainfuckVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrainfuckVM.swift; path = BrainfuckVM/BrainfuckVM.swift; sourceTree = "<group>"; };
+		11D96E1E1AFC984800287DC8 /* BrainfuckRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrainfuckRuntime.swift; path = BrainfuckVM/BrainfuckRuntime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				11D96E181AFC5B2B00287DC8 /* BrainfuckIO.swift */,
 				11D96E1A1AFC5BA100287DC8 /* BrainfuckInstruction.swift */,
 				11D96E1C1AFC675D00287DC8 /* BrainfuckVM.swift */,
+				11D96E1E1AFC984800287DC8 /* BrainfuckRuntime.swift */,
 			);
 			name = BrainfuckVM;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D96E1F1AFC984800287DC8 /* BrainfuckRuntime.swift in Sources */,
 				11D96E1B1AFC5BA100287DC8 /* BrainfuckInstruction.swift in Sources */,
 				11D96DFA1AFC492700287DC8 /* ViewController.swift in Sources */,
 				11D96E1D1AFC675D00287DC8 /* BrainfuckVM.swift in Sources */,
