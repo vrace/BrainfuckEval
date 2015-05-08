@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -99,11 +100,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Vd4-df-KJt" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="3bA-Hv-R6S"/>
-                            <constraint firstItem="Jjo-l1-K1c" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="100" id="EwN-7v-LmU"/>
+                            <constraint firstItem="Jjo-l1-K1c" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="100" id="EwN-7v-LmU">
+                                <variation key="widthClass=compact" constant="70"/>
+                            </constraint>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qT0-DP-7FR" secondAttribute="bottom" constant="20" id="Ifs-Jn-Ads"/>
                             <constraint firstItem="qT0-DP-7FR" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="JNq-dy-VSP"/>
                             <constraint firstItem="qT0-DP-7FR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="JxJ-H4-hYO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="L8L-Jm-ZkB" secondAttribute="trailing" constant="124" id="LGE-Lj-B1V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L8L-Jm-ZkB" secondAttribute="trailing" constant="124" id="LGE-Lj-B1V">
+                                <variation key="widthClass=compact" constant="70"/>
+                            </constraint>
                             <constraint firstItem="Vd4-df-KJt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="T15-LY-ZBD"/>
                             <constraint firstItem="Jjo-l1-K1c" firstAttribute="top" secondItem="Vd4-df-KJt" secondAttribute="bottom" constant="8" id="bHg-x6-Pl5"/>
                             <constraint firstItem="qT0-DP-7FR" firstAttribute="top" secondItem="L8L-Jm-ZkB" secondAttribute="bottom" constant="8" id="bzS-6p-9oO"/>
@@ -119,18 +124,18 @@
                                 <exclude reference="Jjo-l1-K1c"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Ifs-Jn-Ads"/>
+                                <exclude reference="EwN-7v-LmU"/>
+                                <exclude reference="bHg-x6-Pl5"/>
+                                <exclude reference="LGE-Lj-B1V"/>
+                                <exclude reference="qdH-oE-g90"/>
                                 <exclude reference="3bA-Hv-R6S"/>
                                 <exclude reference="T15-LY-ZBD"/>
                                 <exclude reference="oZO-5e-2yn"/>
                                 <exclude reference="rCs-OH-mT0"/>
-                                <exclude reference="EwN-7v-LmU"/>
-                                <exclude reference="bHg-x6-Pl5"/>
                                 <exclude reference="JNq-dy-VSP"/>
                                 <exclude reference="JxJ-H4-hYO"/>
                                 <exclude reference="bzS-6p-9oO"/>
-                                <exclude reference="LGE-Lj-B1V"/>
-                                <exclude reference="qdH-oE-g90"/>
-                                <exclude reference="Ifs-Jn-Ads"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -141,18 +146,18 @@
                                 <include reference="Jjo-l1-K1c"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Ifs-Jn-Ads"/>
+                                <include reference="EwN-7v-LmU"/>
+                                <include reference="bHg-x6-Pl5"/>
+                                <include reference="LGE-Lj-B1V"/>
+                                <include reference="qdH-oE-g90"/>
                                 <include reference="3bA-Hv-R6S"/>
                                 <include reference="T15-LY-ZBD"/>
                                 <exclude reference="oZO-5e-2yn"/>
                                 <include reference="rCs-OH-mT0"/>
-                                <include reference="EwN-7v-LmU"/>
-                                <include reference="bHg-x6-Pl5"/>
                                 <include reference="JNq-dy-VSP"/>
                                 <include reference="JxJ-H4-hYO"/>
                                 <include reference="bzS-6p-9oO"/>
-                                <include reference="LGE-Lj-B1V"/>
-                                <include reference="qdH-oE-g90"/>
-                                <include reference="Ifs-Jn-Ads"/>
                             </mask>
                         </variation>
                     </view>

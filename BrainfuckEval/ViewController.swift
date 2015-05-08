@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, BrainfuckIO {
 
     @IBOutlet weak var sourceView: UITextView!
     @IBOutlet weak var resultView: UITextView!
@@ -18,6 +18,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func runButtonClick(sender: UIButton) {
+        resultView.text = ""
+        
+        var vm = BrainfuckVM(io: self, source: sourceView.text)
+        vm.run()
+    }
+    
+    func write(char: Character) {
+        resultView.text = resultView.text.stringByAppendingString(String(char))
     }
 }
 

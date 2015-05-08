@@ -16,6 +16,6 @@ enum BrainfuckInstruction
     case DataInc
     case DataDec
     case Write
-    case CmpBegin(Int)
-    case CmpEnd
+    case LoopBegin(Int)
+    case LoopEnd(Int)
 }
