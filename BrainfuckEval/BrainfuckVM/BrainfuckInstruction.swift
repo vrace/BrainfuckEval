@@ -19,3 +19,26 @@ enum BrainfuckInstruction
     case LoopBegin(Int)
     case LoopEnd(Int)
 }
+
+func instructionFromCharacter(ch: Character) -> BrainfuckInstruction
+{
+    switch ch
+    {
+    case ">":
+        return .PointerInc
+    case "<":
+        return .PointerDec
+    case "+":
+        return .DataInc
+    case "-":
+        return .DataDec
+    case ".":
+        return .Write
+    case "[":
+        return .LoopBegin(0)
+    case "]":
+        return .LoopEnd(0)
+    default:
+        return .Comment
+    }
+}

@@ -21,29 +21,6 @@ class BrainfuckVM
     
     class func loadSource(source: String) -> [BrainfuckInstruction]?
     {
-        func charToInstruction(ch: Character) -> BrainfuckInstruction
-        {
-            switch ch
-            {
-            case ">":
-                return .PointerInc
-            case "<":
-                return .PointerDec
-            case "+":
-                return .DataInc
-            case "-":
-                return .DataDec
-            case ".":
-                return .Write
-            case "[":
-                return .LoopBegin(0)
-            case "]":
-                return .LoopEnd(0)
-            default:
-                return .Comment
-            }
-        }
-        
         func removeComment(i: BrainfuckInstruction) -> Bool
         {
             switch i
@@ -76,7 +53,7 @@ class BrainfuckVM
             return nil;
         }
         
-        var ins = Array(source).map(charToInstruction).filter(removeComment)
+        var ins = Array(source).map(instructionFromCharacter).filter(removeComment)
         
         for var i = 0; i < ins.count; i++
         {
