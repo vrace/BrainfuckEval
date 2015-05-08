@@ -9,14 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController, BrainfuckIO {
-
+    
     @IBOutlet weak var sourceView: UITextView!
     @IBOutlet weak var resultView: UITextView!
     
     @IBAction func clearButtonClick(sender: UIButton) {
         sourceView.text = ""
     }
-
+    
     @IBAction func runButtonClick(sender: UIButton) {
         resultView.text = ""
         

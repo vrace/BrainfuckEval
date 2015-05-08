@@ -32,7 +32,9 @@ class BrainfuckVM
             }
         }
         
-        func findEndLoop(ins: [BrainfuckInstruction], searchAt: Int) -> Int?
+        var ins = Array(source).map(instructionFromCharacter).filter(removeComment)
+        
+        func findEndLoop(searchAt: Int) -> Int?
         {
             var counter = 0
             for var i = searchAt; i < ins.count; i++
@@ -53,14 +55,12 @@ class BrainfuckVM
             return nil;
         }
         
-        var ins = Array(source).map(instructionFromCharacter).filter(removeComment)
-        
         for var i = 0; i < ins.count; i++
         {
             switch ins[i]
             {
             case .LoopBegin(let _):
-                if let endLoop = findEndLoop(ins, i)
+                if let endLoop = findEndLoop(i)
                 {
                     ins[i] = .LoopBegin(endLoop + 1)
                     ins[endLoop] = .LoopEnd(i)
@@ -80,7 +80,7 @@ class BrainfuckVM
     {
         if let ins = instructions
         {
-            let runtime = BrainfuckRuntime(io: io, instructions: ins)
+            BrainfuckRuntime(io: io, instructions: ins).run()
         }
         else
         {
