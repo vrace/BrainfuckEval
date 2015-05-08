@@ -13,6 +13,8 @@
 		11D96DFF1AFC492700287DC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11D96DFE1AFC492700287DC8 /* Images.xcassets */; };
 		11D96E021AFC492700287DC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D96E001AFC492700287DC8 /* LaunchScreen.xib */; };
 		11D96E0E1AFC492700287DC8 /* BrainfuckEvalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D96E0D1AFC492700287DC8 /* BrainfuckEvalTests.swift */; };
+		11D96E191AFC5B2B00287DC8 /* BrainfuckIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D96E181AFC5B2B00287DC8 /* BrainfuckIO.swift */; };
+		11D96E1B1AFC5BA100287DC8 /* BrainfuckInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D96E1A1AFC5BA100287DC8 /* BrainfuckInstruction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		11D96E071AFC492700287DC8 /* BrainfuckEvalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainfuckEvalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D96E0C1AFC492700287DC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11D96E0D1AFC492700287DC8 /* BrainfuckEvalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainfuckEvalTests.swift; sourceTree = "<group>"; };
+		11D96E181AFC5B2B00287DC8 /* BrainfuckIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrainfuckIO.swift; path = BrainfuckVM/BrainfuckIO.swift; sourceTree = "<group>"; };
+		11D96E1A1AFC5BA100287DC8 /* BrainfuckInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrainfuckInstruction.swift; path = BrainfuckVM/BrainfuckInstruction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		11D96DF41AFC492700287DC8 /* BrainfuckEval */ = {
 			isa = PBXGroup;
 			children = (
+				11D96E171AFC5B0900287DC8 /* BrainfuckVM */,
 				11D96DF71AFC492700287DC8 /* AppDelegate.swift */,
 				11D96DF91AFC492700287DC8 /* ViewController.swift */,
 				11D96DFB1AFC492700287DC8 /* Main.storyboard */,
@@ -110,6 +115,15 @@
 				11D96E0C1AFC492700287DC8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11D96E171AFC5B0900287DC8 /* BrainfuckVM */ = {
+			isa = PBXGroup;
+			children = (
+				11D96E181AFC5B2B00287DC8 /* BrainfuckIO.swift */,
+				11D96E1A1AFC5BA100287DC8 /* BrainfuckInstruction.swift */,
+			);
+			name = BrainfuckVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +226,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D96E1B1AFC5BA100287DC8 /* BrainfuckInstruction.swift in Sources */,
 				11D96DFA1AFC492700287DC8 /* ViewController.swift in Sources */,
+				11D96E191AFC5B2B00287DC8 /* BrainfuckIO.swift in Sources */,
 				11D96DF81AFC492700287DC8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
