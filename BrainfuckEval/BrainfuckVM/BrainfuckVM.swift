@@ -21,8 +21,7 @@ class BrainfuckVM
     
     class func loadSource(source: String) -> [BrainfuckInstruction]?
     {
-        func removeComment(i: BrainfuckInstruction) -> Bool
-        {
+        var ins = Array(source).map(instructionFromCharacter).filter({(i) -> Bool in
             switch i
             {
             case .Comment:
@@ -30,9 +29,7 @@ class BrainfuckVM
             default:
                 return true
             }
-        }
-        
-        var ins = Array(source).map(instructionFromCharacter).filter(removeComment)
+        })
         
         func findEndLoop(searchAt: Int) -> Int?
         {
