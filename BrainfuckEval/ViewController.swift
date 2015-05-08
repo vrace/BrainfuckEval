@@ -13,7 +13,7 @@ class ViewController: UIViewController, BrainfuckIO {
     @IBOutlet weak var sourceView: UITextView!
     @IBOutlet weak var resultView: UITextView!
     
-    var vm: BrainfuckVM?
+    var vm: BrainfuckVM!
     
     @IBAction func clearButtonClick(sender: UIButton) {
         sourceView.text = ""
@@ -30,8 +30,16 @@ class ViewController: UIViewController, BrainfuckIO {
             vm = BrainfuckVM(io: self)
         }
         
-        vm?.load(sourceView.text)
-        vm?.run()
+        if vm.load(sourceView.text)
+        {
+            vm.run()
+        }
+        else
+        {
+            let alert = UIAlertView(title: "Error", message: "Code won't compile", delegate: nil, cancelButtonTitle: "OK")
+            
+            alert.show()
+        }
     }
     
     func write(char: Character) {
