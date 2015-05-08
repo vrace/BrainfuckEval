@@ -20,6 +20,9 @@ class ViewController: UIViewController, BrainfuckIO {
     }
     
     @IBAction func runButtonClick(sender: UIButton) {
+        
+        sourceView.resignFirstResponder()
+        
         resultView.text = ""
         
         if vm == nil
