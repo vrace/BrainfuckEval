@@ -13,6 +13,8 @@ class ViewController: UIViewController, BrainfuckIO {
     @IBOutlet weak var sourceView: UITextView!
     @IBOutlet weak var resultView: UITextView!
     
+    var vm: BrainfuckVM?
+    
     @IBAction func clearButtonClick(sender: UIButton) {
         sourceView.text = ""
     }
@@ -20,8 +22,13 @@ class ViewController: UIViewController, BrainfuckIO {
     @IBAction func runButtonClick(sender: UIButton) {
         resultView.text = ""
         
-        var vm = BrainfuckVM(io: self, source: sourceView.text)
-        vm.run()
+        if vm == nil
+        {
+            vm = BrainfuckVM(io: self)
+        }
+        
+        vm?.load(sourceView.text)
+        vm?.run()
     }
     
     func write(char: Character) {

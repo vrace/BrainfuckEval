@@ -13,13 +13,18 @@ class BrainfuckVM
     var io: BrainfuckIO
     var instructions: [BrainfuckInstruction]?
     
-    init(io: BrainfuckIO, source: String)
+    init(io: BrainfuckIO)
     {
         self.io = io
-        self.instructions = BrainfuckVM.loadSource(source)
     }
     
-    class func loadSource(source: String) -> [BrainfuckInstruction]?
+    func load(source: String) -> Bool
+    {
+        self.instructions = loadSource(source)
+        return self.instructions != nil
+    }
+    
+    private func loadSource(source: String) -> [BrainfuckInstruction]?
     {
         var ins = Array(source).map(instructionFromCharacter).filter({(i) -> Bool in
             switch i
