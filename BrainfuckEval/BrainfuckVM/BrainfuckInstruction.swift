@@ -17,7 +17,7 @@ enum BrainfuckInstruction
     case DataDec
     case Write
     case LoopBegin(Int)
-    case LoopEnd(Int)
+    case LoopEnd
 }
 
 func instructionFromCharacter(ch: Character) -> BrainfuckInstruction
@@ -37,7 +37,7 @@ func instructionFromCharacter(ch: Character) -> BrainfuckInstruction
     case "[":
         return .LoopBegin(0)
     case "]":
-        return .LoopEnd(0)
+        return .LoopEnd
     default:
         return .Comment
     }

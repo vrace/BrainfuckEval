@@ -49,7 +49,7 @@ class BrainfuckVM
                     counter--
                     if counter == 0
                     {
-                        return i
+                        return i + 1
                     }
                 default: ()
                 }
@@ -64,8 +64,7 @@ class BrainfuckVM
             case .LoopBegin(let _):
                 if let endLoop = findEndLoop(i)
                 {
-                    ins[i] = .LoopBegin(endLoop + 1)
-                    ins[endLoop] = .LoopEnd(i)
+                    ins[i] = .LoopBegin(endLoop)
                 }
                 else
                 {

@@ -11,6 +11,7 @@ import Foundation
 class BrainfuckRuntime
 {
     var mem = Array(count: 30000, repeatedValue: 0)
+    var stack: [Int] = []
     var mp = 0
     var ip = 0
     
@@ -55,10 +56,12 @@ class BrainfuckRuntime
                 }
                 else
                 {
+                    stack.append(ip);
                     ip++
                 }
-            case .LoopEnd(let loopBegin):
-                ip = loopBegin
+            case .LoopEnd:
+                ip = stack.last!
+                stack.removeLast()
             default:()
             }
         }
